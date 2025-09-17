@@ -14,4 +14,5 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run "46350036-074e591a-a4eb-4d0a-ae2c-43663a201801"
+          postman collection run "46350036-074e591a-a4eb-4d0a-ae2c-43663a201801" \
+            --env-var baseUrl="https://valentinos-coffee.herokuapp.com"
